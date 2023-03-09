@@ -12,7 +12,7 @@ const App = () => {
   const { isModalOpen } = useSelector((state) => state.modal);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(calculateTotals());
+    dispatch(calculateTotals()); // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cartItems]);
   return (
     <>
